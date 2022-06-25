@@ -1,6 +1,7 @@
 
 package com.verduleria.entity;
 
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,6 +22,8 @@ public class Verdura {
     private int cant_kilo;
     private int precio_kilo;
     private int ubic_cajon;
+    private Date fechaIngreso;
+    
     @ManyToOne
     @JoinColumn(name="tienda_id")
     private Tienda tienda;
@@ -63,6 +66,14 @@ public class Verdura {
 
     public void setUbic_cajon(int ubic_cajon) {
         this.ubic_cajon = ubic_cajon;
+    }
+
+    public Date getFechaIngreso() {
+        return fechaIngreso;
+    }
+
+    public void setFechaIngreso(Date fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
     }
 
     public Tienda getTienda() {

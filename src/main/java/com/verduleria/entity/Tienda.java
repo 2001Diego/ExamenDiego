@@ -33,6 +33,5 @@ public class Tienda implements Serializable {
     public void setTienda(String tienda) {
         this.tienda = tienda;
     }
-    
-    
+      
 }
