@@ -1,4 +1,3 @@
-
 package com.verduleria.service;
 
 import com.verduleria.entity.Tienda;
@@ -7,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 @Service
+
 public class TiendaService implements ITiendaService{
 
     
@@ -19,5 +18,5 @@ public class TiendaService implements ITiendaService{
     public List<Tienda> listStore() {
         return (List<Tienda>)tiendaRepository.findAll();
     }
-    
+
 }
