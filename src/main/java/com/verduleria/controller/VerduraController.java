@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class VerduraController {
@@ -26,5 +27,15 @@ public class VerduraController {
         model.addAttribute("titulo", "Tabla Verduras");
         model.addAttribute("verduras", listaVerdura);
         return "verduras";
+    }
+    
+    
+    
+    
+    
+    @GetMapping("/delete")
+    public String delete(@PathVariable("id") Long idVerdura) {
+        verduraService.delete(idVerdura);
+        return "redirect:/verduras";
     }
 }
