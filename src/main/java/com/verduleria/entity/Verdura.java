@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
 
 
 @Entity
@@ -22,6 +23,7 @@ public class Verdura {
     private int cant_kilo;
     private int precio_kilo;
     private int ubic_cajon;
+    @Temporal(javax.persistence.TemporalType.DATE)
     private Date fechaIngreso;
     
     @ManyToOne

@@ -20,6 +20,9 @@ public class VerduraController {
     
     @Autowired
     private IVerduraService verduraService;
+    private long idVerdura;
+    private Object Verdura;
+    private Object listaTienda;
     
     @GetMapping("/verduras")
     public String index(Model model) {
@@ -31,6 +34,15 @@ public class VerduraController {
     
     
     
+    
+     @GetMapping("/editVerduras/(id)")
+    public String editarVerdura (@PathVariable("id") Long idPersona, Model model){
+        Verdura verduras = verduraService.getVerduraById(idVerdura);        
+        List<Verdura> listaVerdura = tiendaService.listverdura();
+        model.addAttribute("verdura",Verdura);
+        model.addAttribute("tienda",listaTienda);
+        return "crear";
+    }
     
     
     @GetMapping("/delete")
