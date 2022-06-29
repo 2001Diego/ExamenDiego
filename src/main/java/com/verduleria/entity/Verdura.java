@@ -1,6 +1,7 @@
 
 package com.verduleria.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +15,7 @@ import javax.persistence.Temporal;
 
 @Entity
 @Table (name = "verduras")
-public class Verdura {
+public class Verdura implements Serializable {
     
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

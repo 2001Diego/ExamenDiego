@@ -1,6 +1,7 @@
 package com.verduleria.service;
 
 import com.verduleria.entity.Tienda;
+import com.verduleria.entity.Verdura;
 import com.verduleria.repository.TiendaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

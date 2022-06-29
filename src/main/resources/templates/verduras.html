@@ -33,10 +33,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <td th:text="${user.Cant_kilo}"></td>
                     <td th:text="${user.getPrecio_kilo}"></td>
                     <td th:text="${user.getUbic_cajon}"></td>
-                    <td th:text="${user.getFechaIngreso}"></td>
+                    <td th:Date="${user.getFechaIngreso}"></td>
                     <td th:text="${user.getTienda.getTienda}"></td>
                     <td>
-                        <a th:href="@{/editVerdura/{id}(id=${user.getId})}">Edit</a>
+                        <a th:href="@{/editverduras/{id}(id=${user.getId})}">Edit</a>
                     </td>
                     <td>
                         <a th:href="@{/delete/{id}(id=${user.getId})}">Delete</a>
