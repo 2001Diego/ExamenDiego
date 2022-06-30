@@ -29,7 +29,15 @@ public class VerduraController {
         model.addAttribute("verduras", listaVerdura);
         return "verduras";
     }
-
+    
+    @GetMapping("/verdurasN")
+    public String agregarVerdura (Model model){
+        List<Tienda> listaTiendas = verduraService.();
+        model.addAttribute("verdura",new Verdura());
+        model.addAttribute("tiendas",listaTiendas);
+        return "crear";
+    }
+    
     @GetMapping("/editverduras/{id}")
     public String editarVerdura(@PathVariable("id") Long idVerdura, Model model) {
         Verdura verduras = verduraService.getVerduraById(idVerdura);
