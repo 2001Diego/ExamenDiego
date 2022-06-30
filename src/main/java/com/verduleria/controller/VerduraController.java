@@ -32,7 +32,7 @@ public class VerduraController {
     
     @GetMapping("/verdurasN")
     public String agregarVerdura (Model model){
-        List<Tienda> listaTiendas = verduraService.();
+        List<Tienda> listaTiendas = tiendaService.listStore();
         model.addAttribute("verdura",new Verdura());
         model.addAttribute("tiendas",listaTiendas);
         return "crear";
