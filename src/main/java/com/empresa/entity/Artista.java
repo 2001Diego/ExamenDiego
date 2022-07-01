@@ -1,5 +1,5 @@
 
-package com.verduleria.entity;
+package com.empresa.entity;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
@@ -10,13 +10,13 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "tiendas")
-public class Tienda implements Serializable {
+@Table(name = "artistas")
+public class Artista implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String tienda;
+    private String artista;
 
     public long getId() {
         return id;
@@ -26,12 +26,16 @@ public class Tienda implements Serializable {
         this.id = id;
     }
 
-    public String getTienda() {
-        return tienda;
+    public String getArtista() {
+        return artista;
     }
 
-    public void setTienda(String tienda) {
-        this.tienda = tienda;
+    public void setArtista(String artista) {
+        this.artista = artista;
     }
+    
+    
+
+    
       
 }

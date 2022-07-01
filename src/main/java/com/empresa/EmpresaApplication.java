@@ -1,13 +1,13 @@
-package com.verduleria;
+package com.empresa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VerduleriaApplication {
+public class EmpresaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VerduleriaApplication.class, args);
+		SpringApplication.run(EmpresaApplication.class, args);
 	}
 
 }

@@ -12,51 +12,46 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <form th:object = "${verdura}"
+        <form th:object = "${concierto}"
               th:action = "@{/save}"
               method='POST'
               >
             <input type="hidden" th:field="*{id}">
             <div class="row mb-3">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Nombre</label>
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Lugar</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" th:field="*{nombre}">
+                    <input type="text" class="form-control" id="inputEmail3" th:field="*{lugar}">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Cantidad por kilo</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Costo</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPassword3" th:field="*{cant_kilo}">
+                    <input type="text" class="form-control" id="inputPassword3" th:field="*{costo}">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Precio por Kilo</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Capacidad Maxima</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPassword3" th:field="*{precio_kilo}">
+                    <input type="text" class="form-control" id="inputPassword3" th:field="*{capacidadMaxima}">
                 </div>
             </div>
-            <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Ubicacion Cajon</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPassword3" th:field="*{ubic_cajon}">
-                </div>
             </div>
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Fecha de Ingreso</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Fecha</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPassword3" th:field="*{fechaIngreso}">
+                    <input type="text" class="form-control" id="inputPassword3" th:field="*{fecha}">
                 </div>
             </div>
             <div class="form-group mb-3 row">
-                <label for="inputState" class="form-label">Tienda</label>
-                <select th:field="*{tienda}" class="form-control form-control-sm col-md-6" id="tiendas">
-                    <option th:each="x:${tiendas}"
+                <label for="inputState" class="form-label">Artista</label>
+                <select th:field="*{artista}" class="form-control form-control-sm col-md-6" id="artistas">
+                    <option th:each="x:${artistas}"
                             th:value="${x.id}"
-                            th:text="${x.tienda}"/>
+                            th:text="${x.artista}"/>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary" value="Guardar">Submit</button>
         </form>
-        <a href = "/verduras"> Base de Datos </a>
+        <a href = "/concierto"> Base de Datos </a>
     </body>
 </html>
